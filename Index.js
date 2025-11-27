@@ -111,11 +111,14 @@ function countToTen() {
 }
 }
 
-function generateRandomWord() {
-  const words = ["monitor", "program", "application", "keyboard", "javascript", "gaming", "network"];
+function usernameGenerator() {
+  const words = ["cute", "golden","blue","good","ugly","beautiful","pretty","stinky","bored","embarassed","shy","confident","cool","smart","weird","simple","bright","evil","fast","quick","slow","sweet","sour","salty","bitter","cold","sweaty","linear","fat","skinny","plump","magical","sparkly","chatty","fluffy","annoying","obnoxious","kind","angelic","positive","negative","optimistic","pessimistic","tired","sleepy","quiet","confident","outgoing","loud","noisy","overwhelmed","crazy","sigma","skibidi","rizzful","tough","watermelony","dramatic","lively","courageous","determined","resilient","self-aware","open-minded","collaborative","risk-taking","curious","ambitious","independent","integrous","humble"];
   const randomIndex = Math.floor(Math.random() * words.length);
   const randomWord = words[randomIndex];
-  return randomWord;
+  const usernameNumber = Math.floor(Math.random()* 99999)
+  const username = randomWord + "_watermelon" + usernameNumber;
+  const display = document.getElementById("username")
+  display.textContent = username
 }
 
 
