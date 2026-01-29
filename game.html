@@ -1,0 +1,47 @@
+<canvas id="game" width="800" height="800">
+
+</canvas>
+
+<script>
+    const game = document.getElementById("game")
+    const ctx = game.getContext("2d");
+
+    let y = 0;
+    let x = 0;
+
+
+
+    function gameLoop() {
+        clear()
+        ctx.fillStyle = "black"
+        ctx.fillRect(0, 300, 200, 20)
+        
+        if (y >= 300-100) {
+
+        } else {
+
+            y = y + 1;
+        }
+
+        ctx.fillStyle = "red"
+        ctx.fillRect(x, y, 100, 100)
+    }
+
+    setInterval(gameLoop, 10)
+
+    function clear() {
+        ctx.fillStyle = "white"
+        ctx.fillRect(0, 0, 800, 800)
+    }
+
+    document.onkeydown = (ev) => {
+        let key = ev.key;
+        if (key == "ArrowUp") {
+            y = y - 50
+        } else if (key == "ArrowLeft") {
+            x = x - 20
+        } else if (key == "ArrowRight") {
+            x = x + 20
+        }
+    }
+</script>
